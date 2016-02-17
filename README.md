@@ -97,11 +97,12 @@ The authorization plugin can run as a container application or as a host service
   * Clone the project.
   * Restore go dependencies:
 ```go
+  $ go get golang.org/x/sys/unix
   $ godep restore
 ```
-  * Build the binary and image:
+  * Build the binary:
 ```go
-  $ make all
+  $ go install github.com/twistlock/authz/broker
 ```
 
 ## Extending the authorization plugin
